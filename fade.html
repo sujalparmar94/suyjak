@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <style>
+        .header{
+            width: 250px;
+            height: 250px;
+            background: red;
+            display: none;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="header"></div>
+    <button class="fadein">fadein</button>
+    <button class="fadeout">fadeout</button>
+    <button class="fadetoggle">fadetoggle</button>
+    <button class="fadeto">fadeto</button>
+
+    <script>
+        $(document).ready(function () {
+            $('.fadein').click(function(){
+                $('.header').fadeIn(2000);
+            });
+            
+            $('.fadeout').click(function(){
+                $('.header').fadeOut(2000);
+            });
+            
+            $('.fadetoggle').click(function(){
+                $('.header').fadeToggle(2000);
+            });
+            
+            $('.fadeto').click(function(){
+                $('.header').fadeTo('slow',0.4);
+            });
+            
+        })
+    </script>
+    
+</body>
+</html>
